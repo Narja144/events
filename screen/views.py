@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render # origin line
+from django.http import HttpResponse
 
-# Create your views here.
+def index(request):
+    return HttpResponse("Hey Client, my app is running!")
