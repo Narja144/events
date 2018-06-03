@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
       <title>Event Listing</title>
@@ -11,4 +11,18 @@
         </ul>
 
     </body>
-    </html>
+    </html> -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Event Listing</title>
+{% endblock title %}
+
+{% block content %}
+    <ul>
+    {% for event in events %}
+    <li>{{ event.name }} LOCATION: {{ event.location}} DESCRIPTION: {{ event.description }}
+    {% endfor %}
+    </ul>
+{% endblock content %}
