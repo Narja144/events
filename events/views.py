@@ -19,8 +19,8 @@ def event_listing(request):
     return HttpResponse(html)
 
 def event_detail(request, name):
-    data = {'Chill' : '<h2>Chill on the beach just for $400</h2>'
-            'Camping' : '<h2>Camp with us for $50</h2>'
+    data = {'Chill' : '<h2>Chill on the beach just for $400</h2>',
+            'Camping' : '<h2>Camp with us for $50</h2>',
             'Flying' : '<h2>Fly for free</h2>'}
     selection = data.get(name)
     if selection:
